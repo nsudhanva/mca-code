@@ -1,0 +1,50 @@
+1. What does this command do? ls > list
+A. Writes the output of 'ls' command to 'list' file. A new 'list' file will be created.
+
+2. Assign X = 10 at the prompt with spaces on either side of = . Now print the
+value of X . What do you have observed?
+A. 'X command not found' - X is not a command in Unix/Linux
+
+3. Write a command to find the number of files in a directory
+A. ls | wc -l 
+
+4. Write an example for multitasking and multiuser.
+A. Multitasking: Ability to use the text editor while playing music
+   Multiuser: Different users can work on the same file but with different permissions
+
+5. A program file named f1 exists in the current directory, but when we try to
+execute it by entering f1, we see the message f1: command not found. How that
+can happen?
+A. To execute a file, we have to ./ before the file name.
+Anything entered at the command prompt is considered as an instruction (command) to the OS. So it displays 'command not found'.
+
+6. Can you run UNIX commands in uppercase?
+A. No. The commands are case-sensitive.
+
+7. Why password string not displayed on the terminal?
+A. Hiding passwords on terminal is just an extra measure of security for users and their privacy.
+It prevents other people from snooping into user's password.
+
+8. How do you know when a command has completed execution?
+A. The prompt in terminal will return back to its original state after the command is executed.
+
+9. Enter this command: > user.lst . Note what happens. Repeat the process by
+removing the space after the >. Does it make any difference?
+A. A new file 'user.lst' is created in both cases. No difference (spaces between commands are ignored)
+
+10. Enter these two commands: echo * and ls. What do you think the output
+represents?
+A. It echoes the output of 'ls' command and the string 'and ls'
+
+11. Enter these commands: echo '$SHELL' and echo "$SHELL". What difference
+you notice?
+A. echo '$SHELL' - displays/outputs '$SHELL' string 
+   echo "$SHELL" - displays the path to bash shell (/bin/bash)
+
+12. Which of these commands will work? Explain with reasons:
+A.  a. mkdir a/b/c - 'cannot create directory' - path to directory specification is wrong
+    b. mkdir a a/b - Creates a directory named 'a' and a sub directory 'b' under 'a'
+    c. rmdir a/b/c - 'Failed to remove a/b/c' - path to directory specification is wrong
+    d. rmdir a a/b - 'Failed to remove 'a' as it is not empty' - 'a'  contains 'b' and is not empty
+    e. mkdir /bin/foo - 'cannot create directory, permission is denied' - user doesnt have the permission
+

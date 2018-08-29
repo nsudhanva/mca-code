@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rectangle</title>
+</head>
+<style type="text/css">
+	canvas {
+		width: 500px;
+		height: 500px;
+	}
+</style>
+<body>
+ <canvas id="rectangle">
+ 	
+ </canvas>
+ <canvas id="rect">
+ 	
+ </canvas>
+ <script type="text/javascript">
+ 	var canvas = document.getElementById("rectangle");
+ 	var ctx = canvas.getContext('2d');
+
+ 	ctx.fillStyle = 'red';
+ 	ctx.fillRect(10, 10, 100, 100);
+
+ 	var canvas2 = document.getElementById("rect");
+ 	var ctx2 = canvas2.getContext('2d');
+ 	ctx2.fillStyle = 'green';
+ 	ctx2.strokeRect(15, 15, 100, 100);
+ </script>
+</body>
+</html>

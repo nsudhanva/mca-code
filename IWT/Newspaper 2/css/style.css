@@ -1,0 +1,84 @@
+/* General */
+
+* {
+  font-family: "Times New Roman", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body{
+  margin: 0px;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+table{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-style: none;
+    /* margin: 20px; */
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    background-color: lightyellow;
+    /* box-shadow: 2px 2px 2px 1px black; */
+}
+
+.navbar{
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: lightsalmon;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-justify, p{
+    text-align: justify;
+}
+
+.heading{
+    padding: 20px;
+    background-color: lightblue;
+}
+
+.sub-heading{
+    font-size: 30px;
+}
+
+.para{
+    padding: 20px;
+}
+
+.batman{
+    background-color: lightcoral;
+}
+
+.pes{
+    background-color: lightgreen;
+}
+
+.footer{
+    background-color: lightgray;
+}

@@ -1,0 +1,25 @@
+--------- For the input of 5 integers ------------ 
+Time taken for bubble sort: 0.000003
+Time taken for selection sort: 0.000010
+Time taken for merge sort: 0.000005
+Time taken for quick sort: 0.000012
+--------- For the input of 50 integers ------------ 
+Time taken for bubble sort: 0.000007
+Time taken for selection sort: 0.000009
+Time taken for merge sort: 0.000009
+Time taken for quick sort: 0.000028
+--------- For the input of 500 integers ------------ 
+Time taken for bubble sort: 0.000634
+Time taken for selection sort: 0.000758
+Time taken for merge sort: 0.000090
+Time taken for quick sort: 0.002711
+--------- For the input of 5000 integers ------------ 
+Time taken for bubble sort: 0.052752
+Time taken for selection sort: 0.048364
+Time taken for merge sort: 0.000708
+Time taken for quick sort: 0.165123
+--------- For the input of 50000 integers ------------ 
+Time taken for bubble sort: 3.679815
+Time taken for selection sort: 4.081345
+Time taken for merge sort: 0.007579
+Time taken for quick sort: 15.992143

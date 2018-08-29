@@ -1,0 +1,3 @@
+1. factorial of a number
+2. evaluate sin x upto n terms
+3. solve the series 1 + 2^2 + 3^3 ..

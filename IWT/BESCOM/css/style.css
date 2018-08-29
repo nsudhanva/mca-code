@@ -1,0 +1,19 @@
+/* Input */
+input[type="text"]{
+    width: 300px;
+}
+
+/* Heading */
+.heading{
+    text-align: center;
+}
+
+.center{
+    text-align: center;
+}
+
+/* Form */
+.form-box{
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px black;
+}

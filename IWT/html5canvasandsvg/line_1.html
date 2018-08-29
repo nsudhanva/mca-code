@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rectangle</title>
+</head>
+<style type="text/css">
+	canvas {
+		width: 200px;
+		height: 200px;
+	}
+</style>
+<body>
+ <canvas id="line">
+ 	
+ </canvas>
+ <script type="text/javascript">
+ 	var canvas = document.getElementById("line");
+ 	var ctx = canvas.getContext('2d');
+
+ 	ctx.beginPath();
+    ctx.moveTo(75, 50);
+    ctx.lineTo(100, 75);
+    ctx.lineTo(100, 25);
+    ctx.fill();
+
+
+ </script>
+</body>
+</html>

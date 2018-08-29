@@ -1,0 +1,10 @@
+Unix Assignment 5 - Sudhanva
+
+1. awk 'NF>3{print $0}' unix.txt
+2. awk '/aaa/ {count++} END{print count}' unix.txt
+3. largest.sh 
+4. awk 'length($0) > 60 { print $0; }' unix.txt
+5. awk '{t=$4;$4=$1;$1=t};{print}' marks.pu
+6. awk '{for(i=NF;i>=1;i--) printf "%s ", $i;print ""}' unix.txt  
+7. awk 'END{print $NF}' unix.txt
+8. awk '{sum=sum+NF} END {print sum}' unix.txt-

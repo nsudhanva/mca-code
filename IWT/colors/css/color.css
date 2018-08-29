@@ -1,0 +1,39 @@
+.linear-tb{
+	background: linear-gradient(red, yellow);
+}
+
+.linear-lr{
+	background: linear-gradient(to top right, rgb(0, 23, 252), yellow);
+}
+
+.linear-r{
+	background: linear-gradient(to right, indigo, pink);
+}
+
+.linear-l{
+	background: linear-gradient(to left, red, blue);
+}
+
+.linear-dl{
+	background: linear-gradient(to top left, orange, black);
+}
+
+.linear-dr{
+	background: linear-gradient(to top right, gold, blue);
+}
+
+.radial-1{
+	background: radial-gradient(green, yellow);
+}
+
+.radial-2{
+	background: radial-gradient(violet, blue, green);
+}
+
+.radial-3{
+	background: repeating-radial-gradient(red, blue 10%, green 15%);
+}
+
+.radial-4{
+	background: repeating-radial-gradient(gold, silver 20%, crimson 15%, blue 5%);
+}
