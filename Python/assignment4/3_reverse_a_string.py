@@ -10,5 +10,5 @@ def reverse_a_string(something):
     
     return reverse_something
 
-print('Before reversing: ', something)
-print('After reversing: ', reverse_a_string(something))
+print('Before reversing:', something)
+print('After reversing:', reverse_a_string(something))

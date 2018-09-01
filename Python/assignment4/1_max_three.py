@@ -1,7 +1,12 @@
-numbers = input('Enter a list of numbers: ').replace(' ','').split(',')
+numbers = input('Enter a list of numbers (csv): ').replace(' ','').split(',')
 numbers = [int(i) for i in numbers]
 
 def max_three(numbers):
-    return max(numbers)
+    maxx = -1
 
-print('Max: ', max_three(numbers))
+    for i in numbers:
+        if i > maxx:
+            maxx = i
+    return maxx
+
+print('Max:', max_three(numbers))

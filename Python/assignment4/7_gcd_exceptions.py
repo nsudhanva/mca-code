@@ -14,6 +14,6 @@ def calc_gcd(a, b):
             print('Some exception in recursion')
 
 try:
-    print('GCD: ', calc_gcd(a, b))
+    print('GCD:', calc_gcd(a, b))
 except Exception as e:
     print('Some exception in calling')
