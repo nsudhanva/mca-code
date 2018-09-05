@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
- 
+
 // a structure to represent a weighted edge in graph
 struct Edge
 {
@@ -14,8 +14,8 @@ struct Edge
 // and weighted graph
 struct Graph
 {
-    // V-> Number of vertices, E-> Number of edges
-    int V, E;
+    // Vn-> Number of vertices, En-> Number of edges
+    int Vn, En;
  
     // graph is represented as an array of edges. 
     // Since the graph is undirected, the edge
@@ -24,14 +24,14 @@ struct Graph
     struct Edge* edge;
 };
  
-// Creates a graph with V vertices and E edges
-struct Graph* createGraph(int V, int E)
+// Creates a graph with Vn vertices and En edges
+struct Graph* createGraph(int Vn, int En)
 {
     struct Graph* graph = new Graph;
-    graph->V = V;
-    graph->E = E;
+    graph->Vn = Vn;
+    graph->En = En;
  
-    graph->edge = new Edge[E];
+    graph->edge = new Edge[En];
  
     return graph;
 }
@@ -90,8 +90,8 @@ int myComp(const void* a, const void* b)
 // The main function to construct MST using Kruskal's algorithm
 void KruskalMST(struct Graph* graph)
 {
-    int V = graph->V;
-    struct Edge result[V];  // Tnis will store the resultant MST
+    int Vn = graph->Vn;
+    struct Edge result[Vn];  // Tnis will store the resultant MST
     int e = 0;  // An index variable, used for result[]
     int i = 0;  // An index variable, used for sorted edges
  
@@ -99,21 +99,21 @@ void KruskalMST(struct Graph* graph)
     // order of their weight. If we are not allowed to 
     // change the given graph, we can create a copy of
     // array of edges
-    qsort(graph->edge, graph->E, sizeof(graph->edge[0]), myComp);
+    qsort(graph->edge, graph->En, sizeof(graph->edge[0]), myComp);
  
-    // Allocate memory for creating V ssubsets
+    // Allocate memory for creating Vn ssubsets
     struct subset *subsets =
-        (struct subset*) malloc( V * sizeof(struct subset) );
+        (struct subset*) malloc( Vn * sizeof(struct subset) );
  
-    // Create V subsets with single elements
-    for (int v = 0; v < V; ++v)
+    // Create Vn subsets with single elements
+    for (int v = 0; v < Vn; ++v)
     {
         subsets[v].parent = v;
         subsets[v].rank = 0;
     }
  
-    // Number of edges to be taken is equal to V-1
-    while (e < V - 1)
+    // Number of edges to be taken is equal to Vn-1
+    while (e < Vn - 1)
     {
         // Step 2: Pick the smallest edge. And increment 
         // the index for next iteration
@@ -153,9 +153,9 @@ int main()
         |      \ |
         2--------3
             4       */
-    int V = 4;  // Number of vertices in graph
-    int E = 5;  // Number of edges in graph
-    struct Graph* graph = createGraph(V, E);
+    int Vn = 4;  // Number of vertices in graph
+    int En = 5;  // Number of edges in graph
+    struct Graph* graph = createGraph(Vn, En);
  
  
     // add edge 0-1

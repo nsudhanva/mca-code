@@ -3,7 +3,7 @@
  
 #include <stdio.h>
 #include <limits.h>
- 
+
 // Number of vertices in the graph
 #define V 5
  
@@ -68,7 +68,7 @@ void primMST(int graph[V][V])
      }
  
      // print the constructed MST
-     printMST(parent, V, graph);
+     printMST(parent, graph);
 }
  
  
