@@ -1,3 +1,8 @@
+-- Assignment 1, DBMS
+-- Sudhanva N
+-- PES1201702260 
+-- Question 8, Customer Bank Account Database, Part2
+
 -- Consider the following tables
 
 -- Customer (CustomerID, Customername, Address, PhoneNo, City)
@@ -44,19 +49,11 @@ create table deposits (
 
 insert into deposits values ('&acc_no', &customer_id, '&branch_name', &amount);
 
--- Part-1
--- 1. Find bank accounts with a balance under $700:
--- 2. Retrieve a list of all bank branch details, ordered by branch city, with each city’s branches listed in reverse order of holdings.
--- 3. Find customerid’s and average balance of accounts at Perryridge branch
--- 4. Find all customers with more than one account.
-
 -- Part-2
 -- 5. Find the smallest number of assets.
+select branch_name, branch_city, min(assets) from banks;
+
 -- 6. Find the largest balance amount at each branch.
 -- 7. Find all branches with assets greater than at least one branch in Brooklyn.
 -- 8. Find branches with assets greater than all branches in Brooklyn.
 
--- Part-3
--- 9. Find all cities with more than two customers living in the city.
--- 10. Find the largest total account balance of any branch.
--- 11. Add 2% interest to all bank account balances with a balance of $500 or less
