@@ -20,6 +20,8 @@ int main()
 
 	warshall(n, graph, r);
 
+	printf("Transitive Closure: \n");
+
 	for(i = 0; i < n; i ++){
 		for(j = 0; j < n; j++){
             printf ("%d ", r[i][j]); 
