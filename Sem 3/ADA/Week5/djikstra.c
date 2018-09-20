@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void djikstra(int n, int graph[][10], int d[][10]);
+void djikstra(int n, int source, int graph[][10], int d[][10]);
 
 int main()
 {
@@ -18,11 +18,26 @@ int main()
 		}
 	}
 
+	printf("Enter source: \n");
+	scanf("%d", )
+
 
 }
 
-void djikstra(int n, int graph[][10], int d[][10])
+void djikstra(int n, int source, int graph[][10], int d[][10])
 {
+	int i;
 
+	int distance[10];
+	int visited[10];
+
+	for (i = 0; i < n; i++){	
+    	distance[i] = INT_MAX;
+        visited[i] = 0;
+ 	}
+
+ 	distance[source] = 0;
+
+ 	
 
 }
