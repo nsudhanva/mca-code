@@ -6,6 +6,7 @@
 # Create another method called as display, which displays the balance amount
 
 class Bank:
+    'This bank is awesome'
     balance = 0
 
     def __init__(self):
@@ -22,7 +23,7 @@ class Bank:
             message = 'Withdrawn ' + str(amount) + ' successfully'
             return message
         else:
-            message = 'Withdraw not possible'
+            message = 'Withdraw not possible: Balance is' + str(Bank.balance)
             return message
 
     def display_balance(self):
@@ -49,4 +50,10 @@ while True:
     else:
         break
 
-
+print(Bank.__dict__)
+print(Bank.__doc__)
+print(Bank.__dir__)
+print(Bank.__name__)
+print(Bank.__module__)
+print(Bank.__bases__)
+print(dir(Bank))
