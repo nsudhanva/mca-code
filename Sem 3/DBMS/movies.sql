@@ -85,5 +85,6 @@ order by mov_title;
 select * from directors inner join movies on directors.dir_id = movies.dir_id 
 where dir_name = 'Steven Spielberg';
 
-update ratings set rev_stars = 5 where (select dir_id from directors inner join movies on directors.dir_id = movies.dir_id 
+update ratings set rev_stars = 5 where mov_id in 
+(select directors.dir_id from directors inner join movies on directors.dir_id = movies.dir_id 
 where dir_name = 'Steven Spielberg');
