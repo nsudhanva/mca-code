@@ -16,14 +16,18 @@ class Complex:
         self.img = num1.img - num2.img
         return self
 
+    def __gt__(self, num):
+        return self.img > num.img
+
 comp = Complex()
 comp1 = Complex(10, 20)
-comp2 = Complex(20, 30)
+comp2 = Complex(20, 10)
 
-comp = comp.add(comp1, comp2)
-print('Sum: ')
-print(comp.real, comp.img)
+# comp = comp.add(comp1, comp2)
+# print('Sum: ')
+# print(comp.real, comp.img)
+# comp = comp.sub(comp1, comp2)
+# print('Sub: ')
+# print(comp.real, comp.img)
 
-comp = comp.sub(comp1, comp2)
-print('Sub: ')
-print(comp.real, comp.img)
+print(comp1 > comp2)
