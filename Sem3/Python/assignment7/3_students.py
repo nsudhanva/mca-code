@@ -38,7 +38,12 @@ class Result(Student):
             self.assignments.append(marks)
 
     def calc_sgpa(self):
-        self.sgpa = sum(self.internals) * 0.4 + sum(self.externals) * 0.4 + sum(self.assignments) * 0.2
+        results = []
+        for i, j, k in zip(self.internals, self.externals, self.assignments):
+            results.append(i / 2 + j * 0.4 + k)
+            # print(i / 2 + j * 0.4 + k)
+
+        self.sgpa = (sum(results) / (self.subjects * 100)) * 10
 
     def get_sgpa(self):
         return self.sgpa
