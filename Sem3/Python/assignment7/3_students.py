@@ -49,9 +49,10 @@ class Result(Student):
         return self.sgpa
 
 student = Student()
+student.add_student()
 result = Result(student)
 result.isa()
 result.esa()
 result.ass()
 result.calc_sgpa()
-print('SGPA:', result.get_sgpa())
+print('SGPA of', result.student.srn, result.get_sgpa())
