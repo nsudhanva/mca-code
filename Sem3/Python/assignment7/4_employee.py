@@ -8,8 +8,8 @@ class BasicInfo:
     def __init__(self):
         self.name = input('Enter name: ')
         self.id = input('Enter id: ')
-        self.age = input('Enter name: ')
-        self.gender = input('Enter name: ')
+        self.age = input('Enter age: ')
+        self.gender = input('Enter gender: ')
 
 class Employee(BasicInfo, DepartmentInfo):
     def __init__(self, basic_info, dept_info):
