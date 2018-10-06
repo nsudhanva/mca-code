@@ -1,0 +1,23 @@
+. | Matches with any single charster except newline
+? | Match 0 or 1 occurence of the patter to its left
++ | 1 or more occurences of the pattern to its left
+0 | 0 or more occurences of the pattern to its left
+\w | Matches with an nalphanumberic character
+\d | Matches with digits
+\W | Non alphanumberic character
+\D | Non digits
+\s | Matches wiht a single white space character
+\S | Matches any non white space character
+\b | Boundary between word and non word
+\B | Opposite of \b 
+[..] | Matches any single character in a single square bracket
+[^..] | Matches any single character not in square bracket
+\ | It is used for special meaning characters
+\. | To match a period
+\+ | To match for a plus sign 
+^ and $ | ^ and $ match the start and end of the string respectively
+{n, m} | Matches at least n and at most m occurances of the preceding expressions if we write as is
+{,m} | It will return at least any minimum occurances to max m preceding expressions 
+a | b - Matches either a or b 
+() | Groups regex and returns matched text
+\t, \n, \r | Matches tab, newline, return
