@@ -1,61 +1,80 @@
-#include <stdio.h> 
-#include <limits.h> 
+#include<stdio.h>
+#define infinity 999
 
-   
-int minDistance(int dist[], int sptSet[], int V) 
-{ 
-	int min = INT_MAX, min_index; 
+void dijkstra(int n, int v, int cost[10][10], int dist[]);
 
-	for (int v = 0; v < V; v++) 
-		if (sptSet[v] == 0 && dist[v] <= min) 
-			min = dist[v], min_index = v; 
+int main(void)
+{
+    int n, v, i, j, cost[10][10], dist[10];
 
-	return min_index; 
-} 
-   
-int printSolution(int dist[], int V, int src) 
-{ 
-	printf("Source	Vertex   Distance from Source\n"); 
-	for (int i = 0; i < V; i++) 
-		printf("%d \t%d\t\t %d\n", i+1, dist[i],src); 
-} 
+    printf("Enter the number of nodes:\n");
+    scanf("%d",&n);
 
-void dijkstra(int graph[][25], int src, int V) 
-{ 
-	int dist[V];     
-	int sptSet[V];
-	for (int i = 0; i < V; i++) 
-		dist[i] = INT_MAX, sptSet[i] = 0; 
-	dist[src] = 0; 
-	for (int count = 0; count < V-1; count++) 
-	{ 
-		int u = minDistance(dist, sptSet,V); 
-		sptSet[u] = 1; 
-		for (int v = 0; v < V; v++) 
-			if (!sptSet[v] && graph[u][v] && dist[u] != INT_MAX && dist[u]+graph[u][v] < dist[v]) 
-				dist[v] = dist[u] + graph[u][v]; 
-	} 
-	printSolution(dist, V,src); 
-} 
-   
-int main() 
-{ 
-	int V;
-	int src;
-	printf("Enter total vertex\n");
-	scanf("%d",&V);
-	int graph[V][V]; 
-	for (int i = 0; i < V; ++i)
-	{
-		for (int j = 0; j < V; ++j)
-		{
-			printf("[%d,%d] element : ",i+1,j+1 );
-			scanf("%d",&graph[i][j]);
-		}
-	}
-	printf("Enter Source vertex\n");
-	scanf("%d-1",&src);
-	dijkstra(graph, src, V); 
+    printf("Enter the cost matrix:\n");
 
-	return 0; 
+    for(i = 1; i <= n; i++)
+    {
+        for(j = 1; j <= n; j++)
+        {
+            scanf("%d", &cost[i][j]);
+
+            if(cost[i][j] == 0)
+            {
+                cost[i][j] = infinity;
+            }
+        }
+    }
+
+    printf("Enter the source vertex:\n");
+    scanf("%d", &v);
+
+    dijkstra(n, v, cost, dist);
+
+    printf("Shortest path:\n");
+    
+    for(i = 1; i <= n; i++)
+    {
+        if(i != v)
+        {
+            printf("%d -> %d, cost = %d\n", v, i, dist[i]);
+        }
+    }
+    return 0;
+}
+
+void dijkstra(int n, int v, int cost[10][10], int dist[])
+{
+    int i, u, count, w, flag[10], min;
+
+    for(i = 1; i <= n;i++){
+        flag[i] = 0;
+        dist[i] = cost[v][i];
+    }
+    
+    count = 2;
+
+    while(count <= n)
+    {
+        min = 99;
+
+        for(w = 1; w <= n; w++)
+        {
+            if(dist[w] < min && !flag[w])
+            {
+                min = dist[w];
+                u = w;
+            }
+        }
+
+        flag[u] = 1;
+        count++;
+
+        for(w = 1; w <= n; w++)
+        {
+            if((dist[u] + cost[u][w] < dist[w]) && !flag[w])
+            {
+                dist[w] = dist[u] + cost[u][w];
+            }
+        }
+    }
 }
