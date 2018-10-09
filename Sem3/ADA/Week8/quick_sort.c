@@ -9,7 +9,7 @@ int main()
     printf("Enter number of elements in array: ");
     scanf("%d", &n);
 
-    printf("Enter array elements: \n"):
+    printf("Enter array elements: \n");
 
     for(i = 0; i < n; i++){
         scanf("%d", &arr[i]);
@@ -17,10 +17,10 @@ int main()
 
     quick_sort(arr, 0, n);
 
-    printf("Sorted array elements: \n"):
+    printf("Sorted array elements: \n");
 
     for(i = 0; i < n; i++){
-        scanf("%d ", &arr[i]);
+        printf("%d ", arr[i]);
     }
 
     printf("\n");
