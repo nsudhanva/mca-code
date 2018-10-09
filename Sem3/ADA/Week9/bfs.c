@@ -171,4 +171,3 @@ void printQueue(struct queue *q) {
         }
     }    
 }
-B

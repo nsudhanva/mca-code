@@ -258,5 +258,6 @@ void store_to_file(double time_spent[], double time_spent_2[], double time_spent
 // gnuplot
 // plot 'speed_algo.txt'
 // plot 'speed_algo.txt' with lines
-// plot 'speed_algo.txt' using 1:2 with lines, 'speed_algo.txt' using 1:3 with lines, 
-// 'speed_algo.txt' using 1:4 with lines, 'speed_algo.txt' using 1:5 with lines
+/* 
+plot 'speed_algo.txt' using 1:2 with lines, 'speed_algo.txt' using 1:3 with lines, 'speed_algo.txt' using 1:4 with lines, 'speed_algo.txt' using 1:5 with lines
+*/
