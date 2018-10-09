@@ -16,7 +16,7 @@ void store_to_file(double time_spent[], double time_spent_2[], double time_spent
 int main()
 {
 	int a[100000], b[100000], c[100000], d[100000], n, l, u, x;
-	int inputs[] = {5, 50, 500, 5000, 50000};
+	int inputs[] = {100, 400, 700, 1000, 1500, 2000, 2500, 3000, 4000, 5000, 7000, 10000, 20000, 35000, 50000};
 
 	srand(42);
 
@@ -28,9 +28,9 @@ int main()
 
 	generateRandoms(a, b, c, d, l, u, n);
 	// printArray(a, n);
-	double time_spent[5], time_spent_2[5], time_spent_3[5], time_spent_4[5];
+	double time_spent[15], time_spent_2[15], time_spent_3[15], time_spent_4[15];
 
-	for(x = 0; x < 5; x++){
+	for(x = 0; x < 15; x++){
 
 		n = inputs[x];
 
@@ -114,8 +114,7 @@ void printArray(int a[], int n)
 }
 
 void bubble_sort(int a[], int n)
-{
-	
+{	
 	int i, j;
 
    	for (i = 0; i < n - 1; i++){
@@ -248,7 +247,7 @@ void store_to_file(double time_spent[], double time_spent_2[], double time_spent
         return;
     }
 
-    for(i = 0; i < 5; i++){
+    for(i = 0; i < 15; i++){
 	    fprintf(fptr, "%d %lf %lf %lf %lf\n", inputs[i], time_spent[i], time_spent_2[i], time_spent_3[i], time_spent_4[i]);
 	}
 
@@ -258,6 +257,12 @@ void store_to_file(double time_spent[], double time_spent_2[], double time_spent
 // gnuplot
 // plot 'speed_algo.txt'
 // plot 'speed_algo.txt' with lines
+
 /* 
-plot 'speed_algo.txt' using 1:2 with lines, 'speed_algo.txt' using 1:3 with lines, 'speed_algo.txt' using 1:4 with lines, 'speed_algo.txt' using 1:5 with lines
+plot 'speed_algo.txt' using 1:2 title "Bubble Sort" with lines, 
+'speed_algo.txt' using 1:3 title "Selection Sort" with lines, 
+'speed_algo.txt' using 1:4 title "Merge Sort" with lines, 
+'speed_algo.txt' using 1:5 title "Quick Sort" with lines
 */
+
+// plot 'speed_algo.txt' using 1:2 title "Bubble Sort" with lines, 'speed_algo.txt' using 1:3 title "Selection Sort" with lines, 'speed_algo.txt' using 1:4 title "Merge Sort" with lines, 'speed_algo.txt' using 1:5 title "Quick Sort" with lines
