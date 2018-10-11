@@ -1,16 +1,17 @@
-accept x varchar(20) prompt 'Enter a string: '
-
-DECLARE
-	str1 varchar(20) := x;
-	len number;
-	str2 varchar(20);
-
-BEGIN
-	len := Length(str);
-
-	FOR i IN REVERSE 1.. len LOOP
-		str2 := str1 || Substr(str1, i, 1);
-	END LOOP;
-
-	dbms_output.put_line('Revered String is: ', str2);
-END
+declare
+    str1 varchar2(50):='&str';
+    str2 varchar2(50);
+    len number;
+    i number;
+ 
+begin
+    len:=length(str1);
+    
+    for i in reverse 1..len
+    loop
+        str2:=str2 || substr(str1,i,1);
+    end loop;
+    
+    dbms_output.put_line('Reverse of String is:'||str2);
+end;
+/

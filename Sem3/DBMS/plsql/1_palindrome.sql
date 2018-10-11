@@ -1,27 +1,22 @@
-SET SERVEROUTPUT ON;
-
-DECLARE
-	str1 varchar(20) := '&str1';
-	len number;
-	str2 varchar(20);
-
-BEGIN
-	len := Length(str1);
-
-	FOR i IN REVERSE 0.. len LOOP
-		str2 := str1 || Substr(str1, i, 0);
-	END LOOP;
-
-	dbms_output.put_line('\n');
-	dbms_output.put_line('Reversed: ');
-	dbms_output.put_line(str2);
-
-	IF str1 = str2 THEN
-		dbms_output.put_line('Palindrome');
-	ELSE
-		dbms_output.put_line('Not a Palindrome');
-	END IF;
-END;
+declare
+    n number;
+    i number;
+    rev number:=0;
+    r number;
+ 
+begin
+    n:=&n;
+    
+    while n>0
+    loop
+        r:=mod(n,10);
+        rev:=(rev*10)+r;
+        n:=trunc(n/10);
+    end loop;
+ 
+    dbms_output.put_line('reverse is '||rev);
+ 
+end;
 /
 
 --@\student\sudhanva\mca-code\Sem3\DBMS\plsql\1_palindrome.sql
