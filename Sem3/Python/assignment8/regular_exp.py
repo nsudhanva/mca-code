@@ -112,3 +112,48 @@ string = input('Enter a string with special characters or space: ')
 pattern = input('Enter delimiters: ')
 
 print(re.split(pattern, string))
+
+# 17. Replace the substring with the pattern and counts how many times
+
+string = input('Enter a string: ')
+string_replace = input('Enter a replace string: ')
+pattern = string_replace
+print(re.sub(pattern, string_replace, string))
+
+# 18. Matches a string that has an a followed by zero or more b's
+
+string = input('Enter a string: ')
+pattern = 'ab*?'
+print(re.findall(pattern, string))
+
+# 19. Find sequences of lowercase letters joined with an underscore
+
+string = input('Enter a string: ')
+pattern = '^[a-z]+_[a-z]+$'
+print(re.findall(pattern, string))
+
+# 20. Matches a string that has an a followed by anything but ends with b
+
+string = input('Enter a string: ')
+pattern = 'a.*?b$'
+print(re.findall(pattern, string))
+
+# 21. Matches a word containing z not start or end of the word
+
+string = input('Enter a string: ')
+pattern = '\Bz\B'
+
+for i in string.split(' ')
+    print(re.findall(pattern, string))
+
+# 22. Extract year, date, month from an url
+
+string = input('Enter a url: ')
+pattern = '/(\d{4})/(\d{1,2})/(\d{1,2})/'
+print(re.findall(pattern, string))
+
+# 23. Seperate and print numbers of a given string
+
+string = input('Enter a string: ')
+pattern = '\d+'
+print(re.findall(pattern, string))
