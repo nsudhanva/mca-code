@@ -1,0 +1,6 @@
+match() - searches for the first occurance
+search()  - doesnt tell that it is only beginning (anywhere pattern matching)
+findall() - list of all matching occurances
+split(maxsplit = 0) - max splits that can be done - split string by occurances of given pattern
+sub() - replace with a new substring, for only one occurance
+compile() - regex into pattern objects which can be used for pattern matching
