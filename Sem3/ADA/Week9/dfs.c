@@ -24,8 +24,11 @@ void DFS(struct Graph*, int);
 
 int main()
 {
+    int n;
+    printf("Enter number of vertices: ");
+    scanf("%d", &n);
 
-    struct Graph* graph = createGraph(4);
+    struct Graph* graph = createGraph(n);
     addEdge(graph, 0, 1);
     addEdge(graph, 0, 2);
     addEdge(graph, 1, 2);
