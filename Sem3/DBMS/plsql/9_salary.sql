@@ -9,13 +9,13 @@ declare
 
 begin
     if salary < 3000 then
-        pf := 0.05;
+        pf := 0.005;
     elsif salary > 3000 and salary < 5000 then
-        pf := 0.07;
+        pf := 0.007;
     elsif salary > 5000 and salary < 7500 then
-        pf := 0.08;
+        pf := 0.008;
     else
-        pf := 0.1;
+        pf := 0.01;
     end if;
 
     net_salary := salary + (salary * da) + (salary * hra) + (salary * pf);
