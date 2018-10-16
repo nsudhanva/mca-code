@@ -24,38 +24,44 @@ void DFS(struct Graph*, int);
 
 int main()
 {
-    int n;
-    printf("Enter number of vertices: ");
+    int n, x, y, i, v;
+
+    printf("Enter number of edges: ");
     scanf("%d", &n);
 
     struct Graph* graph = createGraph(n);
-    addEdge(graph, 0, 1);
-    addEdge(graph, 0, 2);
-    addEdge(graph, 1, 2);
-    addEdge(graph, 2, 3);
-    
-    printGraph(graph);
 
-    DFS(graph, 2);
-    
+    printf("Enter two pairs of %d adjacent edges to add: \n", n);
+
+    for(i = 0; i < n; i++){
+        scanf("%d %d", &x, &y);
+        addEdge(graph, x, y);
+    }
+ 
+    printf("Enter the starting vertex: ");
+    scanf("%d", &v);
+
+    DFS(graph, v);
+ 
     return 0;
 }
 
-void DFS(struct Graph* graph, int vertex) {
-        struct node* adjList = graph->adjLists[vertex];
-        struct node* temp = adjList;
-        
-        graph->visited[vertex] = 1;
-        printf("Visited %d \n", vertex);
+void DFS(struct Graph* graph, int vertex) 
+{
+    struct node* adjList = graph->adjLists[vertex];
+    struct node* temp = adjList;
     
-        while(temp!=NULL) {
-            int connectedVertex = temp->vertex;
-        
-            if(graph->visited[connectedVertex] == 0) {
-                DFS(graph, connectedVertex);
-            }
-            temp = temp->next;
-        }       
+    graph->visited[vertex] = 1;
+    printf("Visited %d \n", vertex);
+
+    while(temp!=NULL) {
+        int connectedVertex = temp->vertex;
+    
+        if(graph->visited[connectedVertex] == 0) {
+            DFS(graph, connectedVertex);
+        }
+        temp = temp->next;
+    }       
 }
 
  
@@ -101,7 +107,7 @@ void printGraph(struct Graph* graph)
     for (v = 0; v < graph->numVertices; v++)
     {
         struct node* temp = graph->adjLists[v];
-        printf("\n Adjacency list of vertex %d\n ", v);
+        printf("Adjacency list of vertex %d\n ", v);
         while (temp)
         {
             printf("%d -> ", temp->vertex);

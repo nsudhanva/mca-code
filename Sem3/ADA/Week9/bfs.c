@@ -37,16 +37,24 @@ void bfs(struct Graph* graph, int startVertex);
 
 int main()
 {
-    struct Graph* graph = createGraph(6);
-    addEdge(graph, 0, 1);
-    addEdge(graph, 0, 2);
-    addEdge(graph, 1, 2);
-    addEdge(graph, 1, 4);
-    addEdge(graph, 1, 3);
-    addEdge(graph, 2, 4);
-    addEdge(graph, 3, 4);
+    int n, x, y, i, v;
+
+    printf("Enter number of edges: ");
+    scanf("%d", &n);
+
+    struct Graph* graph = createGraph(n);
+    
+    printf("Enter two pairs of %d adjacent edges to add: \n", n);
+
+    for(i = 0; i < n; i++){
+        scanf("%d %d", &x, &y);
+        addEdge(graph, x, y);
+    }
+
+    printf("Enter the starting vertex: ");
+    scanf("%d", &v);
  
-    bfs(graph, 0);
+    bfs(graph, v);
  
     return 0;
 }
@@ -133,7 +141,7 @@ int isEmpty(struct queue* q) {
 
 void enqueue(struct queue* q, int value){
     if(q->rear == SIZE-1)
-        printf("\nQueue is Full!!");
+        printf("Queue is Full\n");
     else {
         if(q->front == -1)
             q->front = 0;
@@ -145,14 +153,14 @@ void enqueue(struct queue* q, int value){
 int dequeue(struct queue* q){
     int item;
     if(isEmpty(q)){
-        printf("Queue is empty");
+        printf("Queue is empty\n");
         item = -1;
     }
     else{
         item = q->items[q->front];
         q->front++;
         if(q->front > q->rear){
-            printf("Resetting queue");
+            printf("Resetting queue\n");
             q->front = q->rear = -1;
         }
     }
@@ -163,11 +171,12 @@ void printQueue(struct queue *q) {
     int i = q->front;
 
     if(isEmpty(q)) {
-        printf("Queue is empty");
+        printf("Queue is empty\n");
     } else {
-        printf("\nQueue contains \n");
+        printf("Queue contains: ");
         for(i = q->front; i < q->rear + 1; i++) {
                 printf("%d ", q->items[i]);
         }
     }    
+    printf("\n");
 }
