@@ -5,7 +5,7 @@ declare
 begin
     dbms_output.put_line('Odd numbers from 1 to 100: ');
     for i in 1..n loop 
-        if mod(n,i) != 0 then
+        if mod(i,2) != 0 then
             dbms_output.put_line(i);
         end if;
     end loop;
