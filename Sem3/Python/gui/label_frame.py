@@ -14,4 +14,4 @@ labelframe.pack(fill = 'both', expand = 'yes')
 left = Label(labelframe, text = 'Inside the LabelFrame')
 
 left.pack()
-mainloop()S
+mainloop()
