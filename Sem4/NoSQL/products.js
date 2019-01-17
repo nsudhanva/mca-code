@@ -60,3 +60,8 @@ db.products.insert(
         }
     ]
 )
+
+// gt, gte, lt, lte
+db.products.find({ quantity: { $eq: 1220 } })
+db.products.find({ price: { $lt: 10000 } })
+db.products.find({ price: { $lt: 10000 } })
