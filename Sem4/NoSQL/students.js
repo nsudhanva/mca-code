@@ -32,3 +32,77 @@ db.students.find(
 )
 
 db.students.find({}, { name: 1, _id: 0 })
+
+db.students.update({ "name": "Shreedhar" }, { "marks": { "sub1": 10, "sub2": 100, "sub3": 300, "sub4": 400 } })
+db.students.update({ "name": "Shreedhar" }, {} , { "marks": { "sub1": 10, "sub2": 100, "sub3": 300, "sub4": 400 } })
+db.students.replaceOne({ "name": "Shreedhar" }, { "marks": { "sub1": 10, "sub2": 100, "sub3": 300, "sub4": 400 } })
+
+db.students.update(
+    { 
+        "name": "Rexi"
+    },
+    {
+        $inc: {
+            "sem": 4 
+        }
+    }
+)
+
+db.students.update(
+    {
+        "name": "Rexi"
+    },
+    {
+        $inc: {
+            "sem": -2
+        }
+    }
+)
+
+db.students.update(
+    {
+        "name": "Shubam"
+    }
+)
+
+// $min
+// $max
+// $mul
+// $setOnInsert
+
+db.students.update(
+    {
+        name: "Rexi"
+    },
+    {
+        $unset: {
+            "sem": ""
+        }
+    }
+)
+
+db.students.update(
+    {
+        name: "Rexi"
+    },
+    {
+        $set: {
+            "marks": [10, 20, 30]
+        }
+    }
+)
+
+// Update the marks of the first student and replace his existing marks of with 90
+// In the entire collection, wherever the marks is 50, replace it with 60
+
+db.students.update(
+    {
+        name: "Rexi",
+        marks : 10
+    },
+    {
+        $set: {
+            "marks.$": 90
+        }
+    }
+)
