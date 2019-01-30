@@ -106,3 +106,47 @@ db.students.update(
         }
     }
 )
+
+db.students.update(
+    {
+        name: "Rexi"
+    },
+    {
+        $inc: {
+            "marks.$[]": 20
+        }
+    }
+)
+
+db.students.update(
+    {},
+    {
+        $inc: {
+            "marks.$[]": 20
+        }
+    },
+    {
+        multi: true
+    }
+)
+
+db.students.update(
+    {
+        name: "Rexi"
+    },
+    {
+        $set: {
+            "marks.$[ele]": 80
+        }
+    },
+    {
+        multi: true,
+        arrayFilters: [{
+            "ele": {
+                $lt: 80
+            }
+        }]
+    }
+)
+
+// If the marks of any students is less than 50, update it to 55
