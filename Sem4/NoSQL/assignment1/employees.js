@@ -183,15 +183,22 @@ Output:
 
 db.employees.find(
     {
-        "emp_code": {
-            $exists: true
+        "doj": {
+            $eq: "Wed Jan 30 2019 08:52:06 GMT+0530 (India Standard Time)"
         }
     } 
 );
 
 /* 
+
 Output:
 
+{ "_id" : ObjectId("5c51185eaaf35b69c46b7bc6"), "emp_name" : "Sudhanva", "emp_code" : "1234", "salary" : 10000, "doj" : "Wed Jan 30 2019 08:52:06 GMT+0530 (India Standard Time)" }
+{ "_id" : ObjectId("5c51185eaaf35b69c46b7bc7"), "emp_name" : "Shubam", "emp_code" : "1235", "salary" : 20000, "doj" : "Wed Jan 30 2019 08:52:06 GMT+0530 (India Standard Time)" }
+{ "_id" : ObjectId("5c51185eaaf35b69c46b7bc8"), "emp_name" : "Shreedhar", "emp_code" : "1236", "salary" : 25000, "doj" : "Wed Jan 30 2019 08:52:06 GMT+0530 (India Standard Time)" }
+{ "_id" : ObjectId("5c51185eaaf35b69c46b7bc9"), "emp_name" : "Prateek", "emp_code" : "1237", "salary" : 45000, "doj" : "Wed Jan 30
+2019 08:52:06 GMT+0530 (India Standard Time)" }
+{ "_id" : ObjectId("5c51185eaaf35b69c46b7bca"), "emp_name" : "Rexi", "emp_code" : "1238", "salary" : 23400, "doj" : "Wed Jan 30 2019 08:52:06 GMT+0530 (India Standard Time)" }
 
 */
 // -------------------------------------------------------------------------------------------------------
@@ -305,6 +312,69 @@ BulkWriteResult({
 consisting of insurance_id, emp_id, insurance_date, insurance_type and amount of premium.
 */
 
-db.employees.find(
+db.createCollection('insurance')
 
+db.departments.find(
+    {
+        age: {
+            $gt: 60
+        }
+    }
 )
+
+db.insurance.insert(
+    {
+        insurance: {
+            insurance_id: 1234,
+            emp_id: "1113",
+            insurance_date: Date(),
+            insurance_type: "Old",
+            insurance_premium: 1000,
+        }
+    }
+)
+
+db.insurance.find()
+
+/* 
+
+Output:
+
+{ "_id" : ObjectId("5c51237564ef8c824084ae16"), "insurance" : { "insurance_id" : 1234, "emp_id" : "1113", "insurance_date" : "Wed Jan 30 2019 09:39:25 GMT+0530 (India Standard Time)", "insurance_type" : "Old", "insurance_premium" : 1000 } }
+
+*/
+// -------------------------------------------------------------------------------------------------------
+/*
+11. If the age of dependents is less than 25, add another collection called education consisting of
+emp_id, children_id, education_institute, fees
+*/
+
+db.createCollection('education')
+
+db.departments.find(
+    {
+        age: {
+            $lt: 25
+        }
+    }
+)
+
+db.education.insert(
+    {
+        insurance: {
+            emp_id: "1113",
+            children_id: "23234",
+            education_institute: "PES",
+            fees: 23423
+        }
+    }
+)
+
+/*
+
+Output:
+
+{ "_id" : ObjectId("5c511e7b64ef8c824084ae13"), "emp_id" : "1115", "dep_id" : "ewrhtdahf", "no_of_dependents" : 2, "age" : 20 }
+
+*/
+// -------------------------------------------------------------------------------------------------------
