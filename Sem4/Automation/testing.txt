@@ -1,0 +1,74 @@
+In order to make sure the app is working according to the custiner requirement we have to perform testing
+
+Saves time
+Automation
+less resources
+multi task
+
+selenium is a free and open source Automation tool which is used to automate web based applications
+
+free
+open source
+no license
+seleniumhq.org
+automate web based applications
+14 programming languages
+selenium supports for multiple platforms such as windows/linux/mac
+selenium supports for all browsers
+
+languages -> webdriver APIs -> Driver.exe -> browsers
+
+                search context
+                        ex
+javascriptexecutor webdriver takesscereenshot
+        imp            imp          imp         
+                remote web Driver
+                        ex
+chromedriver    firefoxdriver   internet explorer driver
+
+search context:
+findElement()
+findElements()
+
+wedriver interface:
+get()   switchTo()
+getTitle()  manage()
+getCurrentUrl() navigate()
+getPageSource() close()
+findElement()   quit()
+findElements()
+getWindowHandle()
+getWindowHandles()
+
+takesscereenshot:
+getScreenShotAs()
+
+javascript executer:
+executeScript()
+executeAsynScript()
+
+download all driver files and jar file 
+extract all driver files
+in eclipse, create a new project with name Automation
+under the java project, create two folders with the name, drivers and jars 
+
+write a script to open and close the browser based on user input
+
+click on inspect element option which will return the source code of the element
+to inspect the element, press f12, selection
+click on the element present on the web page
+all these locators arre present in a class called By which is an abstract class 
+there are 8 type sof locators, and all the locators takes an argument of type string
+the diferrernt types of locatiors arre
+1. id
+2. name
+3. class
+4. tag
+5. link
+6. partiallinktext
+7. css
+
+findElement() - handle event, if not matchin with any elemtns then it will return so such ele,emnt exceptipomn
+if the specified loicatior is matrching weith multiople elemtns then it reutrns addrees of first mathcing element 
+if the specified element is a link then we can identify that element by using the locator link text
+if the link is partially dynamic then we cna identify that elemnt by using partial link text 
