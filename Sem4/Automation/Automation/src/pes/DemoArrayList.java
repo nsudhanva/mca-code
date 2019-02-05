@@ -36,7 +36,7 @@ public class DemoArrayList {
 		System.out.println(count);
 		
 		for(int i = 0; i < count; i++) {
-			WebElement link = allLinks.get();
+			WebElement link = allLinks.get(i);
 			String text = link.getText();
 			System.out.println(text);
 		}

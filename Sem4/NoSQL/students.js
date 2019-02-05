@@ -150,3 +150,16 @@ db.students.update(
 )
 
 // If the marks of any students is less than 50, update it to 55
+
+// Add to existing collection of arrays non unique
+
+db.students.update(
+    {
+        "name": "Sudhanva"
+    },
+    {
+        $addToSet: {
+            marks: 85
+        }
+    }
+)
