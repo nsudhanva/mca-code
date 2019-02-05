@@ -163,3 +163,39 @@ db.students.update(
         }
     }
 )
+
+// -1 is first, +1 is the last
+db.students.update(
+    {
+        "name": "Sudhanva"
+    },
+    {
+        $pop: {
+            marks: -1
+        }
+    }
+)
+
+db.students.update(
+    {
+        "name": "Sudhanva"
+    },
+    {
+        $push: {
+            marks: 35
+        }
+    }
+)
+
+db.students.update(
+    {
+        "name": "Sudhanva"
+    },
+    {
+        $pull: {
+            marks: {
+                $lt: 90
+            }
+        }
+    }
+)
