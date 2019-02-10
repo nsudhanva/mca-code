@@ -199,3 +199,29 @@ db.students.update(
         }
     }
 )
+
+// Push values mutiple values
+
+db.students.update(
+    {
+        "name": "Sudhanva"
+    },
+    {
+        $addToSet: {
+            marks: {
+                $each: [35, 67, 93]
+            }
+        }
+    }
+)
+
+db.students.update(
+    {
+        "name": "Sudhanva"
+    },
+    {
+        marks: {
+            $slice: 2
+        }
+    }
+)
