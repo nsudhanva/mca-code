@@ -128,3 +128,15 @@ db.products.aggregate(
         }
     ]
 )
+
+db.products.aggregate(
+    [
+        {
+            $group:
+            {
+                _id: { name: "$item" },
+                totalAmount: { $sum: { $multiply: ["$price", "$quantity"] } }
+            }
+        }
+    ]
+)
