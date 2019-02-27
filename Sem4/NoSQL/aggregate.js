@@ -129,6 +129,8 @@ db.products.aggregate(
     ]
 )
 
+// $divide, $multiply - both arrays
+
 db.products.aggregate(
     [
         {

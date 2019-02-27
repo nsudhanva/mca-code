@@ -7,6 +7,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import math
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
@@ -73,4 +74,16 @@ y_pred[:10]
 
 
 mean_squared_error(y_pred, y_test)
+
+
+# In[12]:
+
+
+rmse = math.sqrt(mean_squared_error(y_pred, y_test))
+
+
+# In[13]:
+
+
+rmse
 
