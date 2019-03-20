@@ -14,10 +14,19 @@
 * ```mongo --port 27040```
 * ```mongo --port 27041```
 * ```mongo --port 27042```
-5. initiate() and add()
-* find hostname
+
+5.  First set up config
+```javascript
+config_test = {
+    "_id": "test",
+    members: [
+        { _id: 0, host: "127.0.0.1:27040" },
+        { _id: 1, host: "127.0.0.1:27041" },
+        { _id: 2, host: "127.0.0.1:27042" }]
+}
+```
+* Then initiate
 ```rs.initiate('test')```
-```rs.add('hostname:portnumber')```
 
 * Terminal 5: 
 ```db.getMongo().setSlaveOk()```
