@@ -7,9 +7,9 @@
    3. ```mkdir -p /srv/mongodb/test1```
    4. ```mkdir -p /srv/mongodb/test2```
 3. Open another two terminal to start the mongod server (Kannada -> English = Kanglish)
-* ```mongod --port 27040 --dbpath/srv/mongodb/test0 --replSet test --smallfiles --oplogSize 128```
-* ```mongod --port 27041 --dbpath/srv/mongodb/test1 --replSet test --smallfiles --oplogSize 128```
-* ```mongod --port 27042 --dbpath/srv/mongodb/test2 --replSet test --smallfiles --oplogSize 128```
+* ```mongod --port 27040 --dbpath /srv/mongodb/test0 --replSet test --smallfiles --oplogSize 128```
+* ```mongod --port 27041 --dbpath /srv/mongodb/test1 --replSet test --smallfiles --oplogSize 128```
+* ```mongod --port 27042 --dbpath /srv/mongodb/test2 --replSet test --smallfiles --oplogSize 128```
 4. Open another 3 terminals to start the mongo shell
 * ```mongo --port 27040```
 * ```mongo --port 27041```
