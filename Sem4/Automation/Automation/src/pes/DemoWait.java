@@ -7,7 +7,7 @@ public class DemoWait {
 
 	public static void main(String[] args) {
 		WebDriver driver = new ChromeDriver()
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS)
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
 }
