@@ -124,7 +124,7 @@ collection.find(
 query = {
     "$sort": { 
         "isa" : 1,
-        "ca.quiz": 1
+        "ca.type": 1
     } 
 }
 
