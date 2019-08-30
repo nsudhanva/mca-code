@@ -24,7 +24,7 @@ class Call {
 		try {
 			Class.forName(JDBC_DRIVER);
 			Connection con = DriverManager.getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
-			CallableStatement stmt = con.prepareCall("{call update_student(12, \"Shubam\", \"3331\")}");
+			CallableStatement stmt = con.prepareCall("{call update_student(15, \"vijay\", \"3331\")}");
 			stmt.executeQuery();
 			Statement stmt_result = con.createStatement();
 			ResultSet rs = stmt_result.executeQuery("select * from student");
