@@ -1,0 +1,175 @@
+ hadoop fs -copyFromLocal etc\hadoop\abc.txt ~/assignment
+ hadoop fs -copyFromLocal etc\hadoop\abc.txt /assignment
+ hadoop fs -copyFromLocal abc.txt /assignment
+ hdfs dfs
+ hdfs dfs -mkdir assignment
+ hadoop fs -mkdir /user/sudhanva/assignment1
+ hdfs dfs -mkdir assignment1
+ hdfs dfs ls
+ hdfs dfs -ls -R
+ cat assignment1.txt
+ touch assignment1.txt
+ vim assignment1.txt 
+ hadoop fs -copyFromLocal assignment1.txt /assignment1
+ hdfs dfs -ls -R
+ hdfs dfs -ls -R /assignment1
+ hdfs dfs -ls /assignment1
+ hadoop fs -copyFromLocal ~/assignment1.txt /assignment1
+ hdfs fs -ls /assignment1
+ hadoop fs -ls /assignment1
+ hadoop fs -ls 
+ ls
+ hadoop fs -copyFromLocal ~/assignment1.txt /assignment1
+ hadoop fs -ls 
+ hadoop fs -ls /assignment1
+ hadoop fs -ls /assignment1/assignment1
+ clear
+ hadoop fs -ls
+ hadoop fs -ls /sudhanva
+ hadoop fs -ls /assignment1
+ hadoop fs -ls /assignment1/assignment1
+ hadoop fs -ls /assignment1
+ cd /
+ ls
+ cd ~
+ ls
+ clear
+ ls assignment1.txt 
+ ls ass
+ clear
+ hadoop fs -ls
+ hadoop fs -mkdir /user/saurzcode/dir1 /user/saurzcode/dir2
+ hadoop fs -mkdir /user/sudhanva/dir1 /user/sudhanva/dir2
+ hadoop fs -ls
+ hadoop fs -copyFromLocal ~/assignment1.txt /assignment1/assigmnet1.txt
+ hadoop fs -copyFromLocal ~/assignment1.txt /assignment1/assignment1.txt
+ hadoop fs -copyFromLocal ~/assignment1.txt /assignment1/
+ hadoop fs -ls /assignment1
+ hadoop fs -ls /dir1
+ hadoop fs -ls 
+ hadoop fs -ls /user/sudhanva
+ hadoop fs -ls /user/sudhanva/assignment1
+ hadoop fs -ls /user/sudhanva/dir1
+ hadoop fs -copyFromLocal ~/assignment1.txt /user/sudhanva/assignment1/
+ hadoop fs -ls /user/sudhanva/assignment1
+ clear
+ hadoop fs -copyFromLocal ~/assignment1.txt /user/sudhanva/assignment1/
+ hadoop fs -rm  /user/sudhanva/assignment1/
+ hadoop fs -rm  /user/sudhanva/assignment1/assignment1.txt
+ clear
+ hadoop fs -copyFromLocal ~/assignment1.txt /user/sudhanva/assignment1/
+ hadoop fs -ls /user/sudhanva/assignment1
+ hadoop fs -rm  /user/sudhanva/assignment1/assignment.txt
+ hadoop fs -rm  /user/sudhanva/assignment1/assignment1.txt
+ clear
+ hadoop fs -copyFromLocal ~/assignment1.txt /user/sudhanva/assignment1/
+ hadoop fs -ls /user/sudhanva/assignment1
+ clear
+ hadoop fs -ls -h /assignment
+ hadoop fs -ls -h /assignment1
+ hadoop fs -ls -h /user/sudhanva/assignment1
+ clear
+ hadoop fs -ls -h /user/sudhanva/assignment1
+ hadoop fs -mkdir /user/sudhanva/dir1
+ clear
+ hadoop fs -mkdir /user/sudhanva/directory1
+ hadoop fs -mkdir /user/sudhanva/directory1/directory2
+ hadoop fs -mkdir /user/sudhanva/directory1/directory2/directory3
+ hadoop fs -ls -h /user/sudhanva/assignment1
+ hadoop fs -ls -h /user/sudhanva/
+ hadoop fs -ls -h /user/sudhanva/directory1
+ hadoop fs -ls -h /user/sudhanva/directory1/directory2
+ clear
+ hadoop fs -put ~/assignment1.txt /user/sudhanva/directory1/directory2/directory3
+ hadoop fs -put ~/assignment1.txt /user/sudhanva/directory1/directory2/
+ hadoop fs -ls -h /user/sudhanva/directory1/directory2
+ hadoop fs -ls -h /user/sudhanva/directory1/directory2/directory3
+ hadoop fs -appendToFile - /user/sudhanva/directory1/directory2/directory3/assignment1.txt
+ clear
+ echo "Appended stuff" | hdfs dfs -appendToFile /user/sudhanva/directory1/directory2/directory3/assignment1.txt
+ echo "Appended stuff" | hdfs dfs -appendToFile - /user/sudhanva/directory1/directory2/directory3/assignment1.txt
+ hdfs fs cat /user/sudhanva/directory1/directory2/directory3/assignment1.txt
+ clear
+ echo "Appended stuff" | hdfs dfs -appendToFile - /user/sudhanva/directory1/directory2/directory3/assignment1.txt
+ hadoop fs cat /user/sudhanva/directory1/directory2/directory3/assignment1.txt
+ clear
+ echo "Appended stuff" | hdfs dfs -appendToFile - /user/sudhanva/directory1/directory2/directory3/assignment1.txt
+ hadoop fs -cat /user/sudhanva/directory1/directory2/directory3/assignment1.txt
+ hadoop fs -mv /user/sudhanva/directory1/directory2/directory3/assignment1.txt /user/sudhanva/directory1/
+ hadoop fs -ls /user/sudhanva/directory1/
+ hadoop fs -get /user/sudhanva/directory1/assignment1.txt ~/
+ clear
+ hadoop fs -get /user/sudhanva/directory1/assignment1.txt ~/
+ rm -rf assignment1.txt 
+ clear
+ hadoop fs -get /user/sudhanva/directory1/assignment1.txt ~/
+ ls assignment1.txt 
+ hadoop fs -ls -r -S /user/sudhanva/assignment1
+ clear
+ hadoop fs -mkdir /user/sudhanva/newtest
+ hadoop fs -ls
+ hadoop fs -touchz /user/sudhanva/newtest/assignment.txt
+ hadoop fs -ls /user/sudhanva/newtest
+ hadoop fs -copyFromLocal ~/bcd.txt /user/sudhanva/directory1/directory2
+ touch bcd.txt
+ clear
+ hadoop fs -copyFromLocal ~/bcd.txt /user/sudhanva/directory1/directory2
+ hadoop fs -ls /user/sudhanva/directory1/directory2
+ hadoop fs -get /user/sudhanva/directory1/directory2 /user/sudhanva/newtest
+ hadoop fs -get /user/sudhanva/directory1/directory2 /user/sudhanva/assignment1/newtest
+ clear
+ hadoop fs -get /user/sudhanva/directory1/directory2 /user/sudhanva/newtest
+ hadoop fs -get /user/sudhanva/
+ hadoop fs -ls /user/sudhanva/
+ hadoop fs -get /user/sudhanva/directory1/directory2 /user/sudhanva/newtest
+ hadoop distcp /user/sudhanva/directory1/directory2 /user/sudhanva/newtest
+ clear
+ hadoop fs -get /user/sudhanva/directory1/directory2/assignment.txt /user/sudhanva/newtest
+ clear
+ hadoop fs -ls /user/sudhanva/directory1/directory2 /user/sudhanva/newtest
+ hadoop fs -ls /user/sudhanva/directory1/directory2 /user/sudhanva/newtest/
+ hadoop fs -get /user/sudhanva/directory1/directory2 /user/sudhanva/newtest/
+ hadoop fs -ls
+ cleae
+ clear
+ hadoop fs -ls
+ hadoop fs -ls /user/sudhanva
+ hadoop fs -ls /directory1
+ hadoop fs -ls /user/sudhanva/directory1
+ clear
+ hadoop fs -ls /user/sudhanva/directory1/directory2
+ hadoop fs -get /user/sudhanva/directory1/directory2 /user/sudhanva/newtest
+ hadoop fs -cp /user/sudhanva/directory1/directory2 /user/sudhanva/newtest
+ hadoop fs -ls /user/sudhanva/newtest
+ hadoop fs -ls -t /user/sudhanva/newtest
+ clear
+ hadoop fs -rm /user/sudhanva/directory1/directory2
+ hadoop fs -rm -rf /user/sudhanva/directory1/directory2
+ clear
+ hadoop fs -rm -r /user/sudhanva/directory1/directory2
+ hadoop fs -ls -t /user/sudhanva/directory1
+ hadoop fs -usage setfacl
+ clear
+ hadoop fs -setfacl
+ hadoop fs -usage setfacl
+ clear
+ hadoop fs -usage setfacl
+ hadoop fs -truncate 5 /user/sudhanva/assignment1/assignment.txt
+ hadoop fs -truncate 5 /user/sudhanva/directory/assignment.txt
+ hadoop fs -truncate 5 /user/sudhanva/directory1/assignment.txt
+ hadoop fs -ks /user/sudhanva/directory1/
+ hadoop fs -ls /user/sudhanva/directory1/
+ hadoop fs -truncate 5 /user/sudhanva/directory1/assignment1.txt
+ clear
+ hadoop fs -tail /user/sudhanva/directory1/assignment1.txt
+ clear
+ hadoop fs -tail /user/sudhanva/directory1/assignment1.txt
+ clear
+ dwda
+ hdfs dfs -du -h /user/sudhanva/directory1/assignment1.txt
+ hdfs dfs -du -h /user/sudhanva/newtest
+ hdfs dfs -du -s -h /user/sudhanva/newtest
+ clear
+ hdfs dfs -du -s -h /user/sudhanva/newtest
+ clear
+ hadoop fs -count -q -h -v /user/sudh
