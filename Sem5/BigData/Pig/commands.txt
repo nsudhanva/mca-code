@@ -6,3 +6,27 @@ ord_dup = load 'orders_dup.json' using JsonLoader('
     amt: double,
     order_date: chararray
 ');
+
+orders_3 = limit orders 3
+
+orders_desc = order orders by order_id desc;
+orders_asc = order orders by product asc;
+split orders into ord_qty_1 if (quantity == 1), ord_qty_more if (quantity > 1)
+
+col = load 'NYPD.csv' using PigStorage(',');
+col_useful = foreach col_limit generate $0 as date, $2 as borough, $3 as zipcode, TRIM($6) as
+location, $11+$13+$15+$17 as injured, TRIM($19) as reason;
+
+col_reasons = group col_reason_injured by reason;
+col_borough_sample = limit col-reasons-borough 2;
+
+tot_injured_reason = foreach col_reason generate group, SUM(col_reason_injured.injured);
+
+describe tot_injured_reason;
+foreach col_reasons_borough generate group, COUNT(col_reason_injured);
+name_trade = join names by symbol, trades by symbol;
+name_trade_left = join names by symbol left outer, trades by symbol;
+name_trade_right = join names by symbol right outer, trades by symbol;
+
+names_trade_cross = cross names, trades;
+name_trade_cjoin = filter names_trades_cross by names::symbol == trades::symbol;

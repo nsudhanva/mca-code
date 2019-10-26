@@ -1,0 +1,23 @@
+{"order_id":"o1","username":"John","product":"Samsung Phone","quantity":1,"amount":23445.89,"order_date":"3-5-2019"}
+{"order_id":"o2","username":"Jack","product":"Notebook","quantity":2,"amount":20.50,"order_date":"1-5-2019"}
+{"order_id":"o3","username":"Jill","product":"JBL Speakers","quantity":3,"amount":50000.23,"order_date":"1-1-2019"}
+{"order_id":"o7","username":"Ben","product":"IPhone","quantity":1,"amount":70900,"order_date":"3-3-2019"}
+{"order_id":"o8","username":"Amanda","product":"Nike Shoes","quantity":2,"amount":3500.50,"order_date":"5-18-2019"}
+{"order_id":"o2","username":"Jack","product":"Notebook","quantity":2,"amount":20.50,"order_date":"1-5-2019"}
+{"order_id":"o3","username":"Jill","product":"JBL Speakers","quantity":3,"amount":50000.23,"order_date":"1-1-2019"}
+{"order_id":"o9","username":"Caroline","product":"Bose Speakers","quantity":1,"amount":50000.23,"order_date":"7-21-2019"}
+{"order_id":"o10","username":"Ester","product":"Levis Jeans","quantity":5,"amount":2500,"order_date":"3-31-2019"}
+{"order_id":"o4","username":"Johny","product":"Sony Bravio","quantity":1,"amount":100890,"order_date":"1-31-2019"}
+{"order_id":"o5"}
+{"order_id":"o6"}
+{"order_id":"o7","username":"Ben","product":"IPhone","quantity":1,"amount":70900,"order_date":"3-3-2019"}
+{"order_id":"o8","username":"Amanda","product":"Nike Shoes","quantity":2,"amount":3500.50,"order_date":"5-18-2019"}
+{"order_id":"o9","username":"Caroline","product":"Bose Speakers","quantity":1,"amount":50000.23,"order_date":"7-21-2019"}
+{"order_id":"o4","username":"Johny","product":"Sony Bravio","quantity":1,"amount":100890,"order_date":"1-31-2019"}
+{"order_id":"o10","username":"Ester","product":"Levis Jeans","quantity":5,"amount":2500,"order_date":"3-31-2019"}
+{"order_id":"o11"}
+{"order_id":"o7","username":"Ben","product":"IPhone","quantity":1,"amount":70900,"order_date":"3-3-2019"}
+{"order_id":"o8","username":"Amanda","product":"Nike Shoes","quantity":2,"amount":3500.50,"order_date":"5-18-2019"}
+{"order_id":"o9","username":"Caroline","product":"Bose Speakers","quantity":1,"amount":50000.23,"order_date":"7-21-2019"}
+{"order_id":"o10","username":"Ester","product":"Levis Jeans","quantity":5,"amount":2500,"order_date":"3-31-2019"}
+{"order_id":"o12"}
