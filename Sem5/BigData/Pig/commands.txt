@@ -1,0 +1,8 @@
+ord_dup = load 'orders_dup.json' using JsonLoader('
+    ord_id: chararray,
+    uname: chararray,
+    prod: chararray,
+    qty: int,
+    amt: double,
+    order_date: chararray
+');
