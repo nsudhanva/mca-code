@@ -30,3 +30,36 @@ name_trade_right = join names by symbol right outer, trades by symbol;
 
 names_trade_cross = cross names, trades;
 name_trade_cjoin = filter names_trades_cross by names::symbol == trades::symbol;
+
+all_names = union names, other_names;
+dump all_names;
+describe all_names;
+
+names = load 'names.csv' using PigStorage(',') as  
+{
+    symbol: chararray,
+    name: chararray,
+    revenue: chararray
+}
+
+trades = local 'trades.csv' using PigStorage(',') as  
+{
+    symbol: chararray,
+    low: double,
+    open: double,
+    high: double,
+    close: double,
+    date: datetime
+}
+
+stud_act = load 'student_activities.txt'
+
+stud_act_bg = foreach stud_act generate stud_id, name, 
+TOBAG(act1, act2, act3, act4) as activities 
+
+
+col_group = col_inj by (borough, reason);
+
+
+col_total = foreach col_group generate group.borough, group.reason, COUNT(col_inj) as total; 
+col_total = filter col_total_raw by borough is not null and reason is not null 
