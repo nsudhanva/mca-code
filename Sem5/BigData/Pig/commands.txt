@@ -63,3 +63,14 @@ col_group = col_inj by (borough, reason);
 
 col_total = foreach col_group generate group.borough, group.reason, COUNT(col_inj) as total; 
 col_total = filter col_total_raw by borough is not null and reason is not null 
+
+col_stats = foreach col_total_group {
+    total_col = SUM(col_total.total);
+    generate total_col
+}
+
+col_stats = foreach col_total_group {
+    total_col = SUM(col_total.total);
+    generate group, total_col
+}
+
