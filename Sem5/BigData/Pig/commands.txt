@@ -74,3 +74,6 @@ col_stats = foreach col_total_group {
     generate group, total_col
 }
 
+word_bag = foreach lines generate TOKENIZE(line) as bag_of_words;
+describe word_bag;
+dump word_bag;
