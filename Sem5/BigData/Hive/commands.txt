@@ -1,0 +1,6 @@
+show databases;
+create table customers (id bigint, name string, address string)
+show tables
+describe tablename
+
+insert into tablename values (value1, value2);
